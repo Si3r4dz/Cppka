@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="capeczka.Views.Maps">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" >
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+
+                <Label Text="Mapy" TextColor="Black" FontSize="25"></Label>
+            </StackLayout>
+
+
+        </StackLayout>
+
+    </NavigationPage.TitleView>
+    <StackLayout>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Start" Padding="30">
+            <Picker x:Name="picker" Title="Wybierz Usługę" TitleColor="Red" WidthRequest="500">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Terminal 1</x:String>
+                        <x:String>Terminal 2</x:String>
+                        <x:String>Terminal 3A</x:String>
+                        <x:String>Terminal 3B</x:String>
+                        <x:String>Terminal 4</x:String>
+                        <x:String>Terminal 5A</x:String>
+                        <x:String>Terminal 5B</x:String>
+                        <x:String>Terminal 5C</x:String>
+                        <x:String>Terminal 6</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="End">
+            <Image Source="mapa1.png" Margin="0" WidthRequest="500" HeightRequest="300"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

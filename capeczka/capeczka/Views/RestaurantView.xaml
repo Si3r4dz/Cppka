@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="capeczka.Views.RestaurantView"
+             Title="Restauracje">
+    <pv:PancakeView BackgroundColor="Wheat">
+        <CarouselView x:Name="CarView_Restaurant" PeekAreaInsets="100" Loop="False">
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" />
+            </CarouselView.ItemsLayout>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+
+
+                    <StackLayout>
+
+                        <pv:PancakeView CornerRadius="10,10,10,10" BackgroundColor="White" Padding="20" Margin="10" Shadow="{pv:ShadowMarkup Color=Gray, Offset='10,10'}" HeightRequest="250">
+                            <StackLayout>
+                                
+                                <Image Grid.RowSpan="2" Source="{Binding Img}" Aspect="AspectFill"
+                                   HeightRequest="150" WidthRequest="60" />
+                                <Label TextColor="Black" Grid.Column="1" Text="{Binding Name}" FontAttributes="Bold" 
+                                   LineBreakMode="TailTruncation" FontSize="15" Margin="2" VerticalOptions="Center"/>
+                                <Label TextColor="Black" Grid.Row="1" Grid.Column="1" Text="Details" LineBreakMode="TailTruncation" 
+                                   FontAttributes="Italic" VerticalOptions="Center" />
+                            </StackLayout>
+                        </pv:PancakeView>
+
+
+
+
+                    </StackLayout>
+
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+
+        </CarouselView>
+    </pv:PancakeView>
+</ContentPage>

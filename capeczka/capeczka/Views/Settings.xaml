@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="capeczka.Views.Settings"
+             Padding="0,20,0,0">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" >
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+
+                <Label Text="Ustawienia" TextColor="Black" FontSize="25"></Label>
+            </StackLayout>
+
+
+        </StackLayout>
+
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,10">
+            <Grid Padding="0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Tryb nocny" HorizontalOptions="Start" Grid.Column="0" FontSize="20"/>
+                <Switch HorizontalOptions="EndAndExpand" Grid.Column="1"/>
+            </Grid>
+            <Grid Padding="0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Powiadomienia push" HorizontalOptions="Start" Grid.Column="0" FontSize="20"/>
+                <Switch HorizontalOptions="EndAndExpand" Grid.Column="1"/>
+            </Grid>
+            <Grid Padding="0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Powiadomienia" HorizontalOptions="Start" Grid.Column="0" FontSize="20"/>
+                <Switch HorizontalOptions="EndAndExpand" Grid.Column="1"/>
+            </Grid>
+            
+                <Grid Padding="0,8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <xct:Expander Grid.ColumnSpan="2">
+                        <xct:Expander.Header>
+                            <Label Text="Język" HorizontalOptions="Start" Grid.Column="0" FontSize="20"/>
+                    </xct:Expander.Header>
+                        <pv:PancakeView Padding="12" BackgroundColor="LightSkyBlue" Margin="7" CornerRadius="7,7,7,7" HorizontalOptions="FillAndExpand">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                            <pv:PancakeView Padding="5" CornerRadius="5,5,5,5" BackgroundColor="AliceBlue" Grid.Row="0" HorizontalOptions="FillAndExpand">
+                                <StackLayout >
+                                    <Label Text="Polski" FontSize="18"/>
+                                </StackLayout>
+                            </pv:PancakeView>
+                            <pv:PancakeView Padding="5" CornerRadius="5,5,5,5" BackgroundColor="AliceBlue" Grid.Row="1" HorizontalOptions="FillAndExpand" >
+                                <StackLayout>
+                                    <Label Text="Angielski" FontSize="18"/>
+                                </StackLayout>
+                            </pv:PancakeView>
+                           
+                            
+                            
+                            </Grid>
+                        </pv:PancakeView>
+                        
+
+                    </xct:Expander>
+
+
+                </Grid>
+
+            <Grid Padding="0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Kontakt" HorizontalOptions="Start" Grid.Column="0" FontSize="20"/>
+                
+            </Grid>
+
+            <Grid Padding="0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Obecna wersja" HorizontalOptions="Start" Grid.Column="0" FontSize="20"/>
+                <Label Text="(0.05A)" HorizontalOptions="EndAndExpand" Grid.Column="1"/>
+            </Grid>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+            xmlns:local="clr-namespace:capeczka" 
+            xmlns:local1="clr-namespace:capeczka.Views"
+            x:Class="capeczka.Views.TabbedPage1"
+             BarBackgroundColor="#DCDCDC"
+            BarTextColor="Black"
+            >
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" >
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+
+                <Label Text="Usługi" TextColor="Black" FontSize="25"></Label>
+            </StackLayout>
+
+
+        </StackLayout>
+
+    </NavigationPage.TitleView>
+    
+    <local:Services/>
+    <local1:FinanceView/>
+    <local1:RestaurantView/>
+</TabbedPage>
